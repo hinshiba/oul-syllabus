@@ -66,7 +66,7 @@ syllabus at like the Okayama University.
 ```typst
 #h_target
 
-#h_format(50, "なし", "わずか", "半分以下", "半分以上", "かなりあり")
+#h_format(50, "なし", "わずか", "半分以下", "半分以上", "追って連絡する")
 ```
 
 そうでない見出しも`=`によって作成できます．
