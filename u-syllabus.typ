@@ -22,8 +22,7 @@
   // format
   size: 12pt,
   font: "Harano Aji Gothic",
-  paper: "a4",
-  color: "blue",
+  color: blue,
   body,
 ) => {
   // metadata
@@ -34,21 +33,22 @@
 
   // doc
   set document(title: course, author: instructors)
-  set page(paper: paper, margin: 2em)
+  set page(height: auto, margin: 2em)
   set text(hyphenate: true, lang: "ja", size: size, font: font)
-  set par(spacing: 1em, first-line-indent: (amount: 4em, all: true))
+  set par(spacing: 1em, first-line-indent: (amount: 1.5em, all: true), hanging-indent: 1.5em)
+  set enum(indent: 2em)
+  set list(indent: 2em)
 
   show heading: it => {
     set text(size: size, fill: white, weight: "regular")
 
     set align(center)
-    block(inset: 0.5em, width: 100%, fill: blue)[
+    block(inset: 0.5em, width: 100%, fill: color)[
       #set align(left)
       #h(0.6em)
       #it.body
     ]
   }
-
   // header
   show selector.or(..range(2, 12).map(y => grid.cell.where(y: y))): it => {
     if calc.even(it.y) {
@@ -108,4 +108,153 @@
   )
 
   body
+}
+
+/* よくありそうな項目 */
+
+// R3入学生 など
+#let h_target = {
+  [
+    #heading("対象学生")
+  ]
+}
+
+// 対象学生の項目を参照 など
+#let h_other_facluty = {
+  [
+    #heading("他学部学生の履修の可否")
+  ]
+}
+
+#let h_contact = {
+  [
+    #heading("連絡先")
+  ]
+}
+
+// 事前にアポイントメントを取ってください など
+#let h_office_hour = {
+  [
+    #heading("オフィスアワー")
+  ]
+}
+
+//
+#let h_summary = {
+  [
+    #heading("授業の概要")
+  ]
+}
+
+//
+#let h_goal = {
+  [
+    #heading("到達目標")
+  ]
+}
+
+//
+#let h_plan = {
+  [
+    #heading("授業計画")
+  ]
+}
+
+#let h_self_study = {
+  [
+    #heading("授業時間外の学習(予習･復習)方法(成績評価への反映についても含む)")
+  ]
+}
+
+#let h_format = (lecture_rate, peer, ask, think, check, announce) => {
+  [
+    #heading("授業形態・学習方法")
+
+    #v(0.2em)
+    (1) 授業形態-全授業時間に対する[講義形式]:[講義形式以外]の実施割合 \
+    #v(0.4em)
+    #lecture_rate % : #{ 100 - lecture_rate } %
+
+    #v(1em)
+    (2) 授業形態-授業全体の中のアクティブ･ラーニングの内容 \
+
+    #set list(indent: 4em)
+    - 協働的活動(ペア･グループワーク､ディスカッション､プレゼンテーションなど)
+
+      #peer
+
+    #v(1em)
+
+    - 対話的活動(教員からの問いかけ､質疑応答など)
+
+      #ask
+
+    #v(1em)
+    - 思考活動(クリティカル･シンキングの実行､問いを立てるなど)
+
+      #think
+
+    #v(1em)
+    - 理解の確認･促進(問題演習､小テスト､小レポート､授業の振り返りなど)
+
+      #check
+
+    #v(1em)
+
+    (4)授業形態-履修者への連絡事項
+    #v(0.2em)
+    #h(1em)  #announce
+    #v(1em)
+  ]
+}
+
+#let h_support = (media, lms, ta, announce) => {
+  [
+    #heading("使用メディア･機器･人的支援の活用")
+    (1-1)視聴覚メディア(PowerPointのスライド､CD､DVDなど)
+
+    #h(1em) #media
+
+    #v(1em)
+    (1-2)学習管理システム(Moodleなど)
+
+    #h(1em) #lms
+
+    #v(1em)
+    (1-3)人的支援(ゲストスピーカー､TA､ボランティアなど)
+
+    #h(1em) #ta
+
+    #v(1em)
+    (2)履修者への連絡事項
+
+    #h(1em) #announce
+
+    #v(1em)
+  ]
+}
+
+#let h_reference = {
+  [
+    #heading("参考書")
+  ]
+}
+
+//
+#let h_score_eval = {
+  [
+    #heading("成績評価")
+  ]
+}
+
+#let h_require = {
+  [
+    #heading("受講要件")
+  ]
+}
+
+#let h_remarks = {
+  [
+    #heading("備考/履修上の注意")
+  ]
 }
