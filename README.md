@@ -24,11 +24,11 @@ syllabus at like the Okayama University.
 
 #### Local Install
 
-`{data-dir}/typst/packages/local/oul-syllabus/0.1.0`の下にこのリポジトリのファイルを配置してください．
+`{data-dir}/typst/packages/local/oul-syllabus/0.1.1`の下にこのリポジトリのファイルを配置してください．
 先頭に追記します．
 
 ```typst
-#import "@local/oul-syllabus:0.1.0": *
+#import "@local/oul-syllabus:0.1.1": *
 ```
 
 ### Call Style
