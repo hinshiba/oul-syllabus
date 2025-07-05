@@ -33,7 +33,7 @@
 
   // doc
   set document(title: course, author: instructors)
-  set page(height: auto, margin: 2em)
+  set page(height: auto, width: 760pt, margin: 2em)
   set text(hyphenate: true, lang: "ja", size: size, font: font)
   set par(spacing: 1em, first-line-indent: (amount: 1.5em, all: true), hanging-indent: 1.5em)
   set enum(indent: 2em)
@@ -67,8 +67,8 @@
   grid(
     columns: (5fr, 1fr, 1fr, 3fr, 2fr),
     rows: (auto, auto),
-    gutter: 0.5pt,
-    stroke: black,
+    gutter: 2pt,
+    stroke: (thickness: 3pt, paint: black),
     grid.cell(colspan: 5)[
       #block(inset: 0.7em, width: 100%, fill: rgb(0xf0, 0xf0, 0xff, 0xff))[
         #set align(left)
@@ -95,7 +95,7 @@
     grid.cell(colspan: 3)[#numbering], grid.cell(colspan: 2)[#room],
 
     grid.cell(colspan: 2)[必修･選択の別], grid.cell(colspan: 3)[メディア授業科目],
-    grid.cell(colspan: 2)[#attribute], grid.cell(colspan: 3)[#is_online],
+    grid.cell(colspan: 2)[#attribute], grid.cell(colspan: 3)[#{ if is_online { "〇" } else { "－" } }],
 
     grid.cell(colspan: 1)[単位数], grid.cell(colspan: 4)[曜日・時限],
     grid.cell(colspan: 1)[#credits], grid.cell(colspan: 4)[#period],
