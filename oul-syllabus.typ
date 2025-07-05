@@ -67,7 +67,7 @@
   grid(
     columns: (5fr, 1fr, 1fr, 3fr, 2fr),
     rows: (auto, auto),
-    gutter: 2pt,
+    gutter: 1.5pt,
     stroke: (thickness: 3pt, paint: black),
     grid.cell(colspan: 5)[
       #block(inset: 0.7em, width: 100%, fill: rgb(0xf0, 0xf0, 0xff, 0xff))[

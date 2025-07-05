@@ -1,6 +1,6 @@
 [package]
 name = "oul-syllabus"
-version = "0.1.0"
+version = "0.1.1"
 entrypoint = "oul-syllabus.typ"
 authors = ["hinshiba"]
 license = "MIT"

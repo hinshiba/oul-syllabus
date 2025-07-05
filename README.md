@@ -73,6 +73,12 @@ syllabus at like the Okayama University.
 
 ## Changelog
 
+### v0.1.1
+
+縦横比の変更
+
+縦棒が黒く塗れないことがあるのを修正
+
 ### v0.1.0
 
 初期リリース
