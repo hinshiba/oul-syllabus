@@ -1,7 +1,7 @@
 [package]
-name = "u-syllabus"
+name = "oul-syllabus"
 version = "0.1.0"
-entrypoint = "u-syllabus.typ"
+entrypoint = "oul-syllabus.typ"
 authors = ["hinshiba"]
 license = "MIT"
 description = "syllabus at like the Okayama University."

@@ -1,4 +1,4 @@
-# u-syllabus
+# oul-syllabus
 
 syllabus at like the Okayama University.
 
@@ -12,23 +12,23 @@ syllabus at like the Okayama University.
 
 ### Import
 
-`u-syllabus.typ`をダウンロードするかローカルにインストールしてください．
+`oul-syllabus.typ`をダウンロードするかローカルにインストールしてください．
 
 #### Download File
 
-作成するドキュメントと同じフォルダに`u-syllabus.typ`を配置し，先頭に追記します．
+作成するドキュメントと同じフォルダに`oul-syllabus.typ`を配置し，先頭に追記します．
 
 ```typst
-#import "u-syllabus.typ": *
+#import "oul-syllabus.typ": *
 ```
 
 #### Local Install
 
-`{data-dir}/typst/packages/local/u-syllabus/0.1.0`の下にこのリポジトリのファイルを配置してください．
+`{data-dir}/typst/packages/local/oul-syllabus/0.1.0`の下にこのリポジトリのファイルを配置してください．
 先頭に追記します．
 
 ```typst
-#import "@local/u-syllabus:0.1.0": *
+#import "@local/oul-syllabus:0.1.0": *
 ```
 
 ### Call Style

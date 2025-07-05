@@ -1,5 +1,5 @@
 
-#import "@local/u-syllabus:0.1.0": *
+#import "@local/oul-syllabus:0.1.0": *
 
 #show: syllabus.with(
   // header
